@@ -124,7 +124,7 @@ class HBNBCommand(cmd.Cmd):
                 key = value_to_add[0]
                 value = value_to_add[1]
                 if value[0] == value[-1] == '"':
-                    value = value.replace('"', '').replace.('_', ' ')
+                    value = value.replace('"', '').replace('_', ' ')
                 else:
                     try:
                         value = int(value)
