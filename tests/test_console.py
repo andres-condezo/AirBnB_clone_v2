@@ -13,6 +13,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class TestConsole(unittest.TestCase):
 
     def test_prompt(self):
