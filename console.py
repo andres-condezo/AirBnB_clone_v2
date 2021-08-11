@@ -136,7 +136,6 @@ class HBNBCommand(cmd.Cmd):
                 dic[key] = value
         return (dic)
 
-
     def do_create(self, args):
         """ Create an object of any class"""
         new_args = args.split()
@@ -152,7 +151,6 @@ class HBNBCommand(cmd.Cmd):
 
         print(instance.id)
         instance.save()
-
 
     def help_create(self):
         """ Help information for the create method """
