@@ -2,6 +2,12 @@
 """This module defines a base class for all models in our hbnb clone"""
 import uuid
 from datetime import datetime
+from sqlachemy.ext.declarative import declarative_base
+
+if models.is_db == 'db':
+    Base = declarative_base()
+else:
+    Base = object
 
 
 class BaseModel:
