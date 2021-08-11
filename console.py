@@ -113,12 +113,37 @@ class HBNBCommand(cmd.Cmd):
         """ Overrides the emptyline method of CMD """
         pass
 
+    def dic_validate(self, args):
+        """
+        Creates a dictionary and validate the values from a list
+        """
+        dic = {}
+        for arg in args:
+            if "=" in arg:
+                value_to_add = arg.split("=", maxsplit=1)
+                key = value_to_add[0]
+                value = value_to_add[1]
+                if value[0] == value[-1] == '"':
+                    value = value.replace('"', '').replace.('_', ' ')
+                else:
+                    try:
+                        value = int(value)
+                    except:
+                        try:
+                            value = float(value)
+                        except:
+                            continue
+                dic[key] = value
+        return (dic)
+
+
     def do_create(self, args):
         """ Create an object of any class"""
-        if not args:
+        args = args.split()
+        if len(args) == 0:
             print("** class name missing **")
             return
-        elif args not in HBNBCommand.classes:
+        elif args[1] not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
         new_instance = HBNBCommand.classes[args]()
