@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """This module defines a base class for all models in our hbnb clone"""
 import uuid
+import models
 from datetime import datetime
-from sqlachemy.ext.declarative import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, String, DateTime
 
-if models.is_db == 'db':
+if models.type_storage == 'db':
     Base = declarative_base()
 else:
     Base = object
