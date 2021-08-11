@@ -148,7 +148,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         new_dict = self.dic_validate(new_args[1:])
-        instance = self.classes [new_args[0]](**new_dict)
+        instance = self.classes[new_args[0]](**new_dict)
 
         print(instance.id)
         instance.save()
