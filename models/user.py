@@ -2,7 +2,7 @@
 """This module defines a class User"""
 
 from models.base_model import BaseModel, Base
-from os import get_env
+from os import getenv
 import models
 import sqlalchemy
 from sqlalchemy import Column, String
