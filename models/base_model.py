@@ -29,7 +29,7 @@ class BaseModel:
             if "created_at" in kwargs:
                 kwargs['created_at'] = datetime\
                                         .strptime(kwargs['created_at'], datef)
-            if "__cass__" in kwargs:
+            if "__class__" in kwargs:
                 del kwargs['__class__']
 
             self.id = str(uuid.uuid4())
