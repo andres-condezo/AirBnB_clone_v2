@@ -5,7 +5,7 @@ from fabric.api import env, put, local, run
 from datetime import datetime as dt
 from os import path
 
-env.hosts = ['35.243.194.38', '54.91.79.148']
+env.hosts = ['34.139.135.216', '52.23.192.105']
 path_releases = '/data/web_static/releases'
 
 
